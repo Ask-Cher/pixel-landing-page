@@ -2,9 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&family=Pixelify+Sans&display=swap');
 
 /* Base Styles */
+:root {
+    --pixel-blue: #4F87FF;
+    --pixel-dark: #1a1a1a;
+    --nav-height: 80px;
+    --animation-duration: 0.3s;
+    --animation-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
-    padding-top: 30px;
     font-family: 'Be Vietnam Pro', sans-serif;
+    padding-top: var(--nav-height);
+    line-height: 1.6;
+    color: #333;
 }
 
 /* Navigation */
