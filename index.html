@@ -325,7 +325,6 @@
                 <p class="text-gray-100" style="font-size: 0.8em;">by AskCher Singapore</p>
             </div>
             <div class="flex flex-wrap justify-center gap-8 mb-8">
-                <a href="#" class="hover:text-pixel-blue transition-colors">About Us</a>
                 <a href="#" class="hover:text-pixel-blue transition-colors">Contact Us</a>
                 <a href="#" class="hover:text-pixel-blue transition-colors">Privacy Policy</a>
                 <a href="#" class="hover:text-pixel-blue transition-colors">Terms of Service</a>
@@ -369,11 +368,11 @@
             taskElement.style.position = 'relative';
             taskElement.appendChild(popup);
             
-            // Position popup to the right of the task
-            popup.style.left = '100%';
+            // Position popup over the center of the task
+            popup.style.left = '50%';
             popup.style.top = '50%';
-            popup.style.transform = 'translateY(-50%)';
-            popup.style.marginLeft = '10px';
+            popup.style.transform = 'translate(-50%, -50%)';
+            popup.style.zIndex = '10'; // Ensure it appears above other elements
             
             // Remove after animation
             setTimeout(() => {
