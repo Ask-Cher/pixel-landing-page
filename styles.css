@@ -107,3 +107,22 @@ nav {
         opacity: 1; 
     }
 }
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: white;
+    }
+    .isometric-room {
+        max-width: 280px; /* Adjust this value to make it smaller/larger */
+        margin: 0 auto;
+    }
+}
