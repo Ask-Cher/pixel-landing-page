@@ -1,0 +1,109 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&family=Pixelify+Sans&display=swap');
+
+/* Base Styles */
+body {
+    padding-top: 30px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout Components */
+.isometric-room {
+    background: linear-gradient(135deg, #E8F4FD 0%, #D1E9FC 100%);
+}
+
+/* Scrollbar Styles */
+.testimonial-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Task Completion States */
+.task-completed {
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+/* Coin Popup */
+.coin-popup {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    color: #22c55e;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    animation: slideUp 0.8s ease-out;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* Keyframe Animations */
+@keyframes slideUp {
+    0% { 
+        opacity: 0; 
+        transform: translateY(10px) scale(0.8); 
+    }
+    50% { 
+        opacity: 1; 
+        transform: translateY(-5px) scale(1); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateY(-20px) scale(1); 
+    }
+}
+
+@keyframes coinBounce {
+    0% { 
+        transform: translate(-50%, -50%) scale(0) rotate(0deg); 
+        opacity: 0; 
+    }
+    50% { 
+        transform: translate(-50%, -50%) scale(1.2) rotate(180deg); 
+        opacity: 1; 
+    }
+    100% { 
+        transform: translate(-50%, -50%) scale(1) rotate(360deg); 
+        opacity: 1; 
+    }
+}
