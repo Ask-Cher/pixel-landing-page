@@ -86,22 +86,52 @@ nav {
     pointer-events: none;
     white-space: nowrap;
 }
+.section-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.section-indicator:hover {
+    transform: translateX(-50%) translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.floating-text {
+    animation: float 3s ease-in-out infinite;
+    opacity: 0.8;
+    cursor: pointer;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: transparent;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.floating-text:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.05);
+    border-color: currentColor;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.arrow-bounce {
+    animation: bounce 2s infinite;
+}
+
+
 
 /* Keyframe Animations */
-@keyframes slideUp {
-    0% { 
-        opacity: 0; 
-        transform: translateY(10px) scale(0.8); 
-    }
-    50% { 
-        opacity: 1; 
-        transform: translateY(-5px) scale(1); 
-    }
-    100% { 
-        opacity: 0; 
-        transform: translateY(-20px) scale(1); 
-    }
-}
+
 
 @keyframes coinBounce {
     0% { 
