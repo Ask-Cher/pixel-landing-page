@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixcel - Build your world by being productive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pixcel-blue': '#4F87FF',
+                        'pixcel-dark': '#1a1a1a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+        <div class="flex items-center justify-between px-6 py-4 lg:px-12">
+            <div class="flex items-center">
+                <a href="index.html" class="hover:opacity-80 transition-opacity duration-300">
+                    <img src="Assets/Logos/pixcel-name-logo.png" alt="Pixcel" class="h-12 w-auto">
+                </a>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Study Smarter</a>
+                <a href="about-us.html" class="text-gray-600 hover:text-gray-900 transition-colors">Who Are We</a>
+                <button class="bg-pixcel-blue text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-all duration-300 hover:scale-105">Play Pixcel</button>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden" aria-label="Toggle mobile menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden fixed top-16 left-0 right-0 bg-white shadow-lg border-t md:hidden">
+                <div class="flex flex-col p-6 space-y-4">
+                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors py-2">Study Smarter</a>
+                    <a href="about-us.html" class="text-gray-600 hover:text-gray-900 transition-colors py-2">Who Are We</a>
+                    <button class="bg-pixcel-blue text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-all duration-300 mt-4">Play Pixcel</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="px-6 lg:px-12 py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900">
+                Privacy Policy
+            </h1>
+            <p class="text-xl text-gray-600 mb-8">Your privacy matters to us. Learn how we protect and handle your data.</p>
+            <p class="text-sm text-gray-500">Last updated: December 2024</p>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="px-6 lg:px-12 py-12 bg-white">
+        <div class="max-w-4xl mx-auto fade-in">
+            <div class="bg-gray-50 rounded-xl p-6 mb-12">
+                <h2 class="text-xl font-semibold mb-4 text-gray-900">Table of Contents</h2>
+                <div class="grid md:grid-cols-2 gap-2">
+                    <a href="#information-collection" class="text-pixcel-blue hover:text-blue-600 transition-colors py-1">1. Information We Collect</a>
+                    <a href="#information-use" class="text-pixcel-blue hover:text-blue-600 transition-colors py-1">2. How We Use Information</a>
+                    <a href="#information-sharing" class="text-pixcel-blue hover:text-blue-600 transition-colors py-1">3. Information Sharing</a>
+                    <a href="#data-security" class="text-pixcel-blue hover:text-blue-600 transition-colors py-1">4. Data Security</a>
+                    <a href="#user-rights" class="text-pixcel-blue hover:text-blue-600 transition-colors py-1">5. Your Rights</a>
+                    <a href="#cookies" class="text-pixcel-blue hover:text-blue-600 transition-colors py-1">6. Cookies & Tracking</a>
+                    <a href="#children" class="text-pixcel-blue hover:text-blue-600 transition-colors py-1">7. Children's Privacy</a>
+                    <a href="#contact" class="text-pixcel-blue hover:text-blue-600 transition-colors py-1">8. Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Content -->
+    <section class="px-6 lg:px-12 pb-20 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <!-- Introduction -->
+            <div class="fade-in mb-12">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Welcome to Pixcel, developed by AskCher Singapore. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our productivity application and related services. Please read this policy carefully to understand our practices regarding your personal data.
+                </p>
+            </div>
+
+            <!-- Information We Collect -->
+            <div id="information-collection" class="privacy-section fade-in mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">1. Information We Collect</h2>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-gray-800">Personal Information</h3>
+                        <p class="text-gray-700 mb-2">We may collect the following personal information:</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                            <li>Name and email address when you create an account</li>
+                            <li>Profile information you choose to provide</li>
+                            <li>Communication preferences</li>
+                            <li>Feedback and correspondence with us</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-gray-800">Usage Information</h3>
+                        <p class="text-gray-700 mb-2">We automatically collect information about your app usage:</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                            <li>Task completion data and productivity metrics</li>
+                            <li>App features used and interaction patterns</li>
+                            <li>Session duration and frequency of use</li>
+                            <li>Device information and operating system</li>
+                            <li>IP address and general location information</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How We Use Information -->
+            <div id="information-use" class="privacy-section fade-in mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">2. How We Use Your Information</h2>
+                <p class="text-gray-700 mb-4">We use your information to:</p>
+                <div class="bg-blue-50 rounded-lg p-6">
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Provide and maintain the Pixcel application and services</li>
+                        <li>Personalize your productivity experience and recommendations</li>
+                        <li>Track your progress and generate insights about your productivity patterns</li>
+                        <li>Send you important updates about the app and your account</li>
+                        <li>Respond to your questions and provide customer support</li>
+                        <li>Improve our services and develop new features</li>
+                        <li>Detect and prevent fraud or misuse of our services</li>
+                        <li>Comply with legal obligations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Information Sharing -->
+            <div id="information-sharing" class="privacy-section fade-in mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">3. Information Sharing and Disclosure</h2>
+                <p class="text-gray-700 mb-4">We do not sell your personal information. We may share your information in the following circumstances:</p>
+                
+                <div class="space-y-4">
+                    <div class="border-l-4 border-pixcel-blue pl-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Service Providers</h3>
+                        <p class="text-gray-700">We may share information with trusted third-party service providers who assist us in operating our app, such as cloud hosting, analytics, and customer support services.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-gray-300 pl-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Legal Requirements</h3>
+                        <p class="text-gray-700">We may disclose information if required by law, court order, or to protect our rights or the safety of our users.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-gray-300 pl-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Business Transfers</h3>
+                        <p class="text-gray-700">In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Security -->
+            <div id="data-security" class="privacy-section fade-in mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">4. Data Security</h2>
+                <div class="bg-green-50 rounded-lg p-6">
+                    <p class="text-gray-700 mb-4">We implement appropriate security measures to protect your personal information, including:</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li>Encryption of data in transit and at rest</li>
+                        <li>Regular security assessments and updates</li>
+                        <li>Access controls and authentication measures</li>
+                        <li>Secure data centers and infrastructure</li>
+                        <li>Employee training on data protection practices</li>
+                    </ul>
+                    <p class="text-gray-700 mt-4">However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+                </div>
+            </div>
+
+            <!-- User Rights -->
+            <div id="user-rights" class="privacy-section fade-in mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">5. Your Rights and Choices</h2>
+                <p class="text-gray-700 mb-4">You have the following rights regarding your personal information:</p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Access & Portability</h3>
+                        <p class="text-gray-700 text-sm">Request a copy of your personal data and export your productivity data.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Correction</h3>
+                        <p class="text-gray-700 text-sm">Update or correct your personal information through your account settings.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Deletion</h3>
+                        <p class="text-gray-700 text-sm">Request deletion of your account and associated personal data.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h3 class="font-semibold text-gray-800 mb-2">Opt-out</h3>
+                        <p class="text-gray-700 text-sm">Unsubscribe from marketing communications at any time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cookies -->
+            <div id="cookies" class="privacy-section fade-in mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">6. Cookies and Tracking Technologies</h2>
+                <p class="text-gray-700 mb-4">We use cookies and similar technologies to enhance your experience:</p>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-medium text-gray-800 mb-2">Essential Cookies</h3>
+                        <p class="text-gray-700">Required for the app to function properly, including authentication and security features.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-medium text-gray-800 mb-2">Analytics Cookies</h3>
+                        <p class="text-gray-700">Help us understand how users interact with our app to improve performance and features.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-medium text-gray-800 mb-2">Preference Cookies</h3>
+                        <p class="text-gray-700">Remember your settings and preferences for a personalized experience.</p>
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 mt-4">You can manage cookie preferences through your browser settings, though this may affect app functionality.</p>
+            </div>
+
+            <!-- Children's Privacy -->
+            <div id="children" class="privacy-section fade-in mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">7. Children's Privacy</h2>
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                    <p class="text-gray-700">Pixcel is designed for users aged 7 and older. We do not knowingly collect personal information from children under 7. If you believe we have inadvertently collected such information, please contact us immediately so we can delete it.</p>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div id="contact" class="privacy-section fade-in mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">8. Contact Us</h2>
+                <div class="bg-pixcel-blue/5 rounded-lg p-6">
+                    <p class="text-gray-700 mb-4">If you have questions about this Privacy Policy or our data practices, please <a href="/contact-us.html" class="text-pixcel-blue hover:underline">contact us</a></p>
+                </div>
+            </div>
+
+            <!-- Policy Updates -->
+            <div class="fade-in">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">Policy Updates</h2>
+                <p class="text-gray-700 mb-4">We may update this Privacy Policy from time to time. We will notify you of any material changes by:</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4 mb-4">
+                    <li>Posting the updated policy on our website</li>
+                    <li>Sending an email notification to registered users</li>
+                    <li>Displaying a notice in the app</li>
+                </ul>
+                <p class="text-gray-700">Your continued use of Pixcel after any changes constitutes acceptance of the updated policy.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-pixcel-dark text-white px-6 py-12 lg:px-12">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="flex items-center justify-center mb-4">
+                <img src="Assets/Logos/pixcel-name-logo.png" alt="Pixcel" class="h-12 w-auto">
+            </div>
+            <div class="flex items-center justify-center mb-8">
+                <p class="text-gray-100 text-sm">by AskCher Singapore</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 mb-8">
+                <a href="/contact-us.html" class="hover:text-pixcel-blue transition-colors">Contact Us</a>
+                <a href="/privacy-policy.html" class="hover:text-pixcel-blue transition-colors">Privacy Policy</a>
+                <a href="/terms-of-service.html" class="hover:text-pixcel-blue transition-colors">Terms of Service</a>
+            </div>
+            <p class="text-gray-400">© 2024 Pixcel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        
+        // Task completion functionality
+        const todoList = document.getElementById('todoList');
+        
+        todoList.addEventListener('click', (event) => {
+            const taskItem = event.target.closest('.task-item');
+            if (!taskItem) return;
+            
+            const checkbox = taskItem.querySelector('.checkbox');
+            const taskText = taskItem.querySelector('.task-text');
+            
+            // Mark as completed
+            checkbox.innerHTML = `
+                <svg class="w-3 h-3 text-pixcel-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+            `;
+            checkbox.className = 'w-5 h-5 bg-white rounded flex items-center justify-center';
+            taskText.className = 'task-text line-through opacity-75';
+            
+            // Remove interactivity
+            taskItem.className = 'flex items-center gap-3';
+            
+            // Show coin popup
+            const popup = document.createElement('div');
+            popup.className = 'coin-popup';
+            popup.innerHTML = '+5 coins!';
+            
+            taskItem.style.position = 'relative';
+            taskItem.appendChild(popup);
+            
+            setTimeout(() => {
+                if (popup.parentNode) {
+                    popup.parentNode.removeChild(popup);
+                }
+            }, 800);
+        });
+        
+        // Learn more button smooth scroll
+        document.getElementById('learnMoreBtn').addEventListener('click', () => {
+            const featuresSection = document.getElementById('features');
+            const navHeight = 80;
+            const offsetPosition = featuresSection.offsetTop - navHeight;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
