@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Pixcel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pixcel-blue': '#4F87FF',
+                        'pixcel-dark': '#1a1a1a',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            padding-top: 80px;
+        }
+        
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.animate {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .fade-in.animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .terms-section {
+            scroll-margin-top: 100px;
+        }
+
+        .form-container {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 2px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-inner {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .form-inner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #4F87FF, #667eea, #764ba2);
+        }
+        
+        iframe {
+            border: none;
+            width: 100%;
+            min-height: 850px;
+            display: block;
+            background: white;
+            border-radius: 0 0 18px 18px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+        <div class="flex items-center justify-between px-6 py-4 lg:px-12">
+            <div class="flex items-center">
+                <a href="index.html" class="hover:opacity-80 transition-opacity duration-300">
+                    <img src="Assets/Logos/pixcel-name-logo.png" alt="Pixcel" class="h-12 w-auto">
+                </a>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Study Smarter</a>
+                <a href="about-us.html" class="text-gray-600 hover:text-gray-900 transition-colors">Who Are We</a>
+                <button class="bg-pixcel-blue text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-all duration-300 hover:scale-105">Play Pixcel</button>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden" aria-label="Toggle mobile menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden fixed top-16 left-0 right-0 bg-white shadow-lg border-t md:hidden">
+                <div class="flex flex-col p-6 space-y-4">
+                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors py-2">Study Smarter</a>
+                    <a href="about-us.html" class="text-gray-600 hover:text-gray-900 transition-colors py-2">Who Are We</a>
+                    <button class="bg-pixcel-blue text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-all duration-300 mt-4">Play Pixcel</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="px-6 lg:px-12 py-20 bg-gradient-to-br from-indigo-50 to-purple-100">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900">
+                Reach out to us.
+            </h1>
+            <p class="text-xl text-gray-600 mb-8">Have any feedback? We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="px-6 lg:px-12 py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto fade-in">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    We value your input and are committed to making Pixcel the best learning experience possible. 
+                    Share your thoughts, report issues, or suggest new features.
+                </p>
+            </div>
+            
+            <div class="form-container mx-auto max-w-3xl">
+                <div class="form-inner">
+                    <iframe 
+                        src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Xu-lWwkxd06Fvc_rDTR-ghgUqXaUtcxOiQq-B3sMbyhUMFdBTU1HOElBNldaUTZaVzZONzFJRk83VS4u&embed=true" 
+                        allowfullscreen 
+                        webkitallowfullscreen 
+                        mozallowfullscreen 
+                        msallowfullscreen
+                        title="Contact Form">
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Other Ways to Reach Us</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-pixcel-blue/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <svg class="w-6 h-6 text-pixcel-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-medium text-gray-900 mb-1">Email Support</h4>
+                            <p class="text-gray-600 text-sm">Quick responses within 24 hours. Email us at </p>
+                            <a href="mailto:askchersg@gmail.com" class="text-pixcel-blue font-medium text-sm hover:underline">askchersg@gmail.com</a>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-12 h-12 bg-pixcel-blue/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <svg class="w-6 h-6 text-pixcel-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2v-6a2 2 0 012-2h8z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-medium text-gray-900 mb-1">Our Social Media Pages</h4>
+                            <a href="#" class="text-pixcel-blue hover:underline text-sm">Facebook</a>
+                            <span class="text-gray-300">•</span>
+                            <a href="#" class="text-pixcel-blue hover:underline text-sm">Instagram</a>
+                            <span class="text-gray-300">•</span>
+                            <a href="#" class="text-pixcel-blue hover:underline text-sm">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pixcel-dark text-white px-6 py-12 lg:px-12">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="flex items-center justify-center mb-4">
+                <img src="Assets/Logos/pixcel-name-logo.png" alt="Pixcel" class="h-12 w-auto">
+            </div>
+            <div class="flex items-center justify-center mb-8">
+                <p class="text-gray-100 text-sm">by AskCher Singapore</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 mb-8">
+                <a href="/contact-us.html" class="hover:text-pixcel-blue transition-colors">Contact Us</a>
+                <a href="/privacy-policy.html" class="hover:text-pixcel-blue transition-colors">Privacy Policy</a>
+                <a href="/terms-of-service.html" class="hover:text-pixcel-blue transition-colors">Terms of Service</a>
+            </div>
+            <p class="text-gray-400">© 2024 Pixcel. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
