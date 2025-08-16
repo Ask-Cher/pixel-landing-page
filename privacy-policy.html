@@ -28,33 +28,35 @@
 </head>
 <body class="bg-white">
     <!-- Navigation -->
-    <nav class="flex items-center justify-between px-6 py-4 lg:px-12">
-        <div class="flex items-center">
-            <a href="index.html" class="hover:opacity-80 transition-opacity duration-300">
-                <img src="Assets/Logos/pixcel-name-logo.png" alt="Pixcel" class="h-12 w-auto">
-            </a>
-        </div>
-        
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center gap-8">
-            <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Study Smarter</a>
-            <a href="/about-us.html" class="text-gray-600 hover:text-gray-900 transition-colors">Who Are We</a>
-            <button class="bg-pixcel-blue text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-all duration-300 hover:scale-105">Play Pixcel</button>
-        </div>
-        
-        <!-- Mobile Menu Button -->
-        <button id="mobileMenuBtn" class="md:hidden" aria-label="Toggle mobile menu">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden fixed top-16 left-0 right-0 bg-white shadow-lg border-t md:hidden">
-            <div class="flex flex-col p-6 space-y-4">
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors py-2">Study Smarter</a>
-                <a href="/about-us.html" class="text-gray-600 hover:text-gray-900 transition-colors py-2">Who Are We</a>
-                <button class="bg-pixcel-blue text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-all duration-300 mt-4">Play Pixcel</button>
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+        <div class="flex items-center justify-between px-6 py-4 lg:px-12">
+            <div class="flex items-center">
+                <a href="index.html" class="hover:opacity-80 transition-opacity duration-300">
+                    <img src="Assets/Logos/pixcel-name-logo.png" alt="Pixcel" class="h-12 w-auto">
+                </a>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">Study Smarter</a>
+                <a href="about-us.html" class="text-gray-600 hover:text-gray-900 transition-colors">Who Are We</a>
+                <button class="bg-pixcel-blue text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-all duration-300 hover:scale-105">Play Pixcel</button>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden" aria-label="Toggle mobile menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden fixed top-16 left-0 right-0 bg-white shadow-lg border-t md:hidden">
+                <div class="flex flex-col p-6 space-y-4">
+                    <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors py-2">Study Smarter</a>
+                    <a href="about-us.html" class="text-gray-600 hover:text-gray-900 transition-colors py-2">Who Are We</a>
+                    <button class="bg-pixcel-blue text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-all duration-300 mt-4">Play Pixcel</button>
+                </div>
             </div>
         </div>
     </nav>
